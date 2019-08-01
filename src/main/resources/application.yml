@@ -16,5 +16,7 @@ mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
 server:
   port: 8080
+  servlet:
+    context-path: /goods
 
 
