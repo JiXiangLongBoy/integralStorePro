@@ -17,4 +17,22 @@ public class GoodsServiceImpl implements GoodsService {
        List<Goods> goodsList= goodsMapper.getGoodsByDongType(dongId);
         return goodsList;
     }
+
+    @Override
+    public List<Goods> priceDesc(FenType dongId) {
+        List<Goods> priceDescList = goodsMapper.priceDesc(dongId);
+        return priceDescList;
+    }
+
+    @Override
+    public List<Goods> salesDesc(FenType dongId) {
+        List<Goods> salesDescList = goodsMapper.salesDesc(dongId);
+        return salesDescList;
+    }
+
+    @Override
+    public List<Goods> getGoodsByBrand(FenType dongId, Goods brandId) {
+        List<Goods> brandGoodsList =goodsMapper.getGoodsByBrand(dongId,brandId);
+        return brandGoodsList;
+    }
 }

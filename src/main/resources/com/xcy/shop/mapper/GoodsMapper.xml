@@ -6,4 +6,14 @@
     <select id="getGoodsByDongType" parameterType="int" resultType="Goods">
         select * from goods g ,dongfen d where g.dongId = d.dongId and g.dongId = #{dongId}
     </select>
+    <select id="priceDesc" parameterType="int" resultType="Goods">
+        select * from goods g ,dongfen d where g.dongId = d.dongId and g.dongId = #{dongId} order by g.price desc
+    </select>
+    <select id="salesDesc" parameterType="int" resultType="Goods">
+        select * from goods g ,dongfen d where g.dongId = d.dongId and g.dongId = #{dongId} order by g.sales desc
+    </select>
+    <select id="getGoodsByBrand" parameterType="int" resultType="Goods">
+        select * from goods g ,dongfen d,brand b where g.dongId = d.dongId and g.brandId=b.brandId
+        and g.dongId = #{dongId} and g.brandId=#{brandId}
+    </select>
 </mapper>

@@ -46,6 +46,12 @@
                 },"slow");
             });
         });
+
+        $(function () {
+            $.post("getGoodsByDongType",null,function (data) {
+                loadData(data);
+            });
+        });
     </script>
 </head>
 <body style="background:white;">

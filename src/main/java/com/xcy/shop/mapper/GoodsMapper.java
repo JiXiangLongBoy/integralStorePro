@@ -8,4 +8,10 @@ import java.util.List;
 @Mapper
 public interface GoodsMapper {
     List<Goods> getGoodsByDongType(FenType dongId);
+
+    List<Goods> priceDesc(FenType dongId);
+
+    List<Goods> salesDesc(FenType dongId);
+
+    List<Goods> getGoodsByBrand(FenType dongId, Goods brandId);
 }
