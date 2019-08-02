@@ -32,7 +32,7 @@ public class Goods {
 
     private Integer statusId;
 
-    private Integer dongType;
+    private Integer dongId;
 
     public Integer getGoodsId() {
         return goodsId;
@@ -146,14 +146,13 @@ public class Goods {
         this.statusId = statusId;
     }
 
-    public Integer getDongType() {
-        return dongType;
+    public Integer getDongId() {
+        return dongId;
     }
 
-    public void setDongType(Integer dongType) {
-        this.dongType = dongType;
+    public void setDongId(Integer dongId) {
+        this.dongId = dongId;
     }
-
 
     @Override
     public String toString() {
@@ -172,7 +171,7 @@ public class Goods {
                 ", brand='" + brand + '\'' +
                 ", goodsNum=" + goodsNum +
                 ", statusId=" + statusId +
-                ", dongType=" + dongType +
+                ", dongId=" + dongId +
                 '}';
     }
 }
