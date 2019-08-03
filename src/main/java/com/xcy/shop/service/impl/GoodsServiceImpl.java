@@ -3,6 +3,7 @@ package com.xcy.shop.service.impl;
 import com.xcy.shop.mapper.GoodsMapper;
 import com.xcy.shop.pojo.FenType;
 import com.xcy.shop.pojo.Goods;
+import com.xcy.shop.pojo.GoodsType;
 import com.xcy.shop.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,5 +35,16 @@ public class GoodsServiceImpl implements GoodsService {
     public List<Goods> getGoodsByBrand(FenType dongId, Goods brandId) {
         List<Goods> brandGoodsList =goodsMapper.getGoodsByBrand(dongId,brandId);
         return brandGoodsList;
+    }
+
+    @Override
+    public List<String> getBannerUrl() {
+
+        return  goodsMapper.getBannerUrl();
+    }
+
+    @Override
+    public List<GoodsType> getGoodsTypeList() {
+        return goodsMapper.getGoodsTypeList();
     }
 }

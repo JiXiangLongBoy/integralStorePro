@@ -16,4 +16,15 @@
         select * from goods g ,dongfen d,brand b where g.dongId = d.dongId and g.brandId=b.brandId
         and g.dongId = #{dongId} and g.brandId=#{brandId}
     </select>
+
+    <select id="getBannerUrl" resultType="string">
+        select bannerUrl from indexbanner
+    </select>
+
+    <select id="getGoodsTypeList" resultType="com.xcy.shop.pojo.GoodsType">
+        select * from goodstype
+    </select>
+
+
+
 </mapper>

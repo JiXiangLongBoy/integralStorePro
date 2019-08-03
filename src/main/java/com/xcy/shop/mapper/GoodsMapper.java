@@ -2,6 +2,7 @@ package com.xcy.shop.mapper;
 
 import com.xcy.shop.pojo.FenType;
 import com.xcy.shop.pojo.Goods;
+import com.xcy.shop.pojo.GoodsType;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -14,4 +15,8 @@ public interface GoodsMapper {
     List<Goods> salesDesc(FenType dongId);
 
     List<Goods> getGoodsByBrand(FenType dongId, Goods brandId);
+
+    List<String> getBannerUrl();
+
+    List<GoodsType> getGoodsTypeList();
 }
