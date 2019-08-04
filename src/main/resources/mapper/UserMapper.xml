@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xcy.shop.mapper.UserMapper">
+
+    <select id="isLogin" parameterType="user" resultType="int">
+        select userid from user where username=#{userName} and password=#{passWord}
+    </select>
+
+    <select id="login" parameterType="user" resultType="int">
+        select count(1) from user where username = #{userName} and password = #{passWord}
+    </select>
+
+    <select id="selectUserName" parameterType="String" resultType="int">
+       select count(1)  from user where username = #{userName}
+    </select>
+
+    <insert id="insertUser" parameterType="user" >
+      insert into user ( userId,userName,
+      phone, password,address,city,estaurantName,consignee)
+    values ( #{userId},#{userName},
+      #{phone}, #{passWord},#{address},#{city},#{estaurantName},#{consignee})
+    </insert>
+
+
+
+</mapper>
