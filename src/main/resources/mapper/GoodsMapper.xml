@@ -26,5 +26,21 @@
     </select>
 
 
+    <select id="getHotsellGoods" resultType="com.xcy.shop.pojo.Goods">
+           select * from goods where discount=0 order by sales DESC limit 0,5
+    </select>
+
+    <select id="getGoodsByTime" resultType="com.xcy.shop.pojo.Goods">
+           select * from goods where discount=0 order by time desc limit 0,5;
+    </select>
+
+
+    <select id="getGoodsByDiscount" resultType="com.xcy.shop.pojo.Goods">
+           select * from goods where discount>0 limit 0,5;
+    </select>
+
+    <select id="getGoodsById" parameterType="int" resultType="com.xcy.shop.pojo.Goods">
+           select g.*,b.brandName from goods g left join brand b on g.brandId=b.brandId where goodsId=#{id}
+    </select>
 
 </mapper>

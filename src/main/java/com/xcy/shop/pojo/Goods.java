@@ -34,6 +34,36 @@ public class Goods {
 
     private Integer dongId;
 
+    private String goodsImgUrl;
+
+    private String goodsInfoUrl;
+
+    private String brandName;
+
+    public String getBrandName() {
+        return brandName;
+    }
+
+    public String getGoodsInfoUrl() {
+        return goodsInfoUrl;
+    }
+
+    public void setGoodsInfoUrl(String goodsInfoUrl) {
+        this.goodsInfoUrl = goodsInfoUrl;
+    }
+
+    public void setBrandName(String brandName) {
+        this.brandName = brandName;
+    }
+
+    public String getGoodsImgUrl() {
+        return goodsImgUrl;
+    }
+
+    public void setGoodsImgUrl(String goodsImgUrl) {
+        this.goodsImgUrl = goodsImgUrl;
+    }
+
     public Integer getGoodsId() {
         return goodsId;
     }

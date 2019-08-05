@@ -19,4 +19,12 @@ public interface GoodsMapper {
     List<String> getBannerUrl();
 
     List<GoodsType> getGoodsTypeList();
+
+    List<Goods> getHotsellGoods();
+
+    List<Goods> getGoodsByTime();
+
+    List<Goods> getGoodsByDiscount();
+
+    Goods getGoodsById(int id);
 }

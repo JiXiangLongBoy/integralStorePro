@@ -98,166 +98,68 @@
     </dt>
     <dd>
         <ul>
-            <li>
-                <a href="product.html" class="goodsPic">
-                    <img src="upload/goods001.jpg"/>
-                </a>
-                <div class="goodsInfor">
-                    <h2>
-                        <a href="product.html">COV橘子庄园 6秒急速电动开</a>
-                    </h2>
-                    <p>
-                        <del>1200</del>
-                    </p>
-                    <p>
-                        <strong class="price">1000</strong>
-                    </p>
-                    <a class="addToCart">&#126;</a>
-                </div>
-            </li>
-            <li>
-                <a href="product.html" class="goodsPic">
-                    <img src="upload/goods002.jpg"/>
-                </a>
-                <div class="goodsInfor">
-                    <h2>
-                        <a href="product.html">IBOH艾铂赫煎锅H863 家用</a>
-                    </h2>
-                    <p>
-                        <del>1200</del>
-                    </p>
-                    <p>
-                        <strong class="price">1000</strong>
-                    </p>
-                    <a class="addToCart">&#126;</a>
-                </div>
-            </li>
-            <li>
-                <a href="product.html" class="goodsPic">
-                    <img src="upload/goods003.jpg"/>
-                </a>
-                <div class="goodsInfor">
-                    <h2>
-                        <a href="product.html">德国GESS 减肥腰带懒人甩脂</a>
-                    </h2>
-                    <p>
-                        <del>1200</del>
-                    </p>
-                    <p>
-                        <strong class="price">1000</strong>
-                    </p>
-                    <a class="addToCart">&#126;</a>
-                </div>
-            </li>
+            <c:forEach items="${goodsList}" var="goods">
+                <li>
+                    <a href="${pageContext.request.contextPath}/goods/showproduct?id=${goods.goodsId}" class="goodsPic">
+                        <img src="${pageContext.request.contextPath}/${goods.goodsImgUrl}"/>
+                    </a>
+                    <div class="goodsInfor">
+                        <h2>
+                            <a href="${pageContext.request.contextPath}/goods/showproduct?id=${goods.goodsId}">${goods.goodsName}</a>
+                        </h2>
+                        <p>
+                            <strong class="price">${goods.price}</strong>
+                        </p>
+                        <a class="addToCart">&#126;</a>
+                    </div>
+                </li>
+            </c:forEach>
+        </ul>
+    </dd>
+
+
+    <dd>
+        <ul>
+            <c:forEach items="${goodsTimeList}" var="goods">
+                <li>
+                    <a href="${pageContext.request.contextPath}/goods/showproduct?id=${goods.goodsId}" class="goodsPic">
+                        <img src="${pageContext.request.contextPath}/${goods.goodsImgUrl}"/>
+                    </a>
+                    <div class="goodsInfor">
+                        <h2>
+                            <a href="${pageContext.request.contextPath}/goods/showproduct?id=${goods.goodsId}">${goods.goodsName}</a>
+                        </h2>
+                        <p>
+                            <strong class="price">${goods.price}</strong>
+                        </p>
+                        <a class="addToCart">&#126;</a>
+                    </div>
+                </li>
+            </c:forEach>
         </ul>
     </dd>
     <dd>
         <ul>
+            <c:forEach items="${goodsDiscountList}" var="goods">
             <li>
-                <a href="product.html" class="goodsPic">
-                    <img src="upload/goods004.jpg"/>
+                <a href="${pageContext.request.contextPath}/goods/showproduct?id=${goods.goodsId}" class="goodsPic">
+                    <img src="${pageContext.request.contextPath}/${goods.goodsImgUrl}"/>
                 </a>
                 <div class="goodsInfor">
                     <h2>
-                        <a href="product.html">人民本（RMBook）N3系列</a>
+                        <a href="${pageContext.request.contextPath}/goods/showproduct?id=${goods.goodsId}">${goods.goodsName}</a>
                     </h2>
                     <p>
-                        <del>600</del>
+                        <del>${goods.price}</del>
                     </p>
                     <p>
-                        <strong class="price">500</strong>
+                        <strong class="price">${goods.discount}</strong>
                     </p>
                     <a class="addToCart">&#126;</a>
                 </div>
             </li>
-            <li>
-                <a href="product.html" class="goodsPic">
-                    <img src="upload/goods008.jpg"/>
-                </a>
-                <div class="goodsInfor">
-                    <h2>
-                        <a href="product.html">人民本（RMBook）N3系列</a>
-                    </h2>
-                    <p>
-                        <del>600</del>
-                    </p>
-                    <p>
-                        <strong class="price">500</strong>
-                    </p>
-                    <a class="addToCart">&#126;</a>
-                </div>
-            </li>
-            <li>
-                <a href="product.html" class="goodsPic">
-                    <img src="upload/goods009.jpg"/>
-                </a>
-                <div class="goodsInfor">
-                    <h2>
-                        <a href="product.html">人民本（RMBook）N3系列</a>
-                    </h2>
-                    <p>
-                        <del>500</del>
-                    </p>
-                    <p>
-                        <strong class="price">3.90</strong>
-                    </p>
-                    <a class="addToCart">&#126;</a>
-                </div>
-            </li>
-    </dd>
-    <dd>
-        <ul>
-            <li>
-                <a href="product.html" class="goodsPic">
-                    <img src="upload/goods005.jpg"/>
-                </a>
-                <div class="goodsInfor">
-                    <h2>
-                        <a href="product.html">人民本（RMBook）N3系列</a>
-                    </h2>
-                    <p>
-                        <del>400</del>
-                    </p>
-                    <p>
-                        <strong class="price">300</strong>
-                    </p>
-                    <a class="addToCart">&#126;</a>
-                </div>
-            </li>
-            <li>
-                <a href="product.html" class="goodsPic">
-                    <img src="upload/goods006.jpg"/>
-                </a>
-                <div class="goodsInfor">
-                    <h2>
-                        <a href="product.html">人民本（RMBook）N3系列</a>
-                    </h2>
-                    <p>
-                        <del>400</del>
-                    </p>
-                    <p>
-                        <strong class="price">300</strong>
-                    </p>
-                    <a class="addToCart">&#126;</a>
-                </div>
-            </li>
-            <li>
-                <a href="product.html" class="goodsPic">
-                    <img src="upload/goods007.jpg"/>
-                </a>
-                <div class="goodsInfor">
-                    <h2>
-                        <a href="product.html">人民本（RMBook）N3系列</a>
-                    </h2>
-                    <p>
-                        <del>400</del>
-                    </p>
-                    <p>
-                        <strong class="price">300</strong>
-                    </p>
-                    <a class="addToCart">&#126;</a>
-                </div>
-            </li>
+            </c:forEach>
+        </ul>
     </dd>
 </dl>
 <!--floatCart-->

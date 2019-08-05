@@ -47,4 +47,24 @@ public class GoodsServiceImpl implements GoodsService {
     public List<GoodsType> getGoodsTypeList() {
         return goodsMapper.getGoodsTypeList();
     }
+
+    @Override
+    public List<Goods> getHotsellGoods() {
+        return goodsMapper.getHotsellGoods();
+    }
+
+    @Override
+    public List<Goods> getGoodsByTime() {
+        return goodsMapper.getGoodsByTime();
+    }
+
+    @Override
+    public List<Goods> getGoodsByDiscount() {
+        return goodsMapper.getGoodsByDiscount();
+    }
+
+    @Override
+    public Goods getGoodsById(int id) {
+        return goodsMapper.getGoodsById(id);
+    }
 }
