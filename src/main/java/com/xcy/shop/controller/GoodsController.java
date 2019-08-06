@@ -46,5 +46,11 @@ public class GoodsController {
         return "product";
     }
 
+    @RequestMapping("/productlist")
+    public String productList(Model model,int typeId){
+
+        return "product_list";
+    }
+
 
 }

@@ -82,7 +82,7 @@
 <ul class="categoryLiIcon">
     <c:forEach items="${goodsTypeList}" var="type">
         <li>
-            <a href="product_list.html?typeid=${type.id}">
+            <a href="${pageContext.request.contextPath}/goods/productlist?typeId=${type.id}">
                 <img src="${pageContext.request.contextPath}/${type.typeImgUrl}" />
                 <em>${type.typeName}</em>
             </a>
